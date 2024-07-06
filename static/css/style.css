@@ -1,18 +1,76 @@
-li:hover{
-    background-color: brown;
-    border-radius: 15px ;
+/* Basic reset */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: large;
+}
 
+/* Ensures the content takes all available space except for the footer */
+.content {
+    flex: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* Text color */
+    text-align: center; /* Centered text */
+    padding: 1rem; /* Padding */
+}
+
+/* Optional: You can add additional styling for links */
+footer a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+footer a:last-child {
+    margin-right: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 576px) {
+    footer a {
+        margin-right: 0.5rem;
+    }
+}
+
+/* Hover effect for list items */
+li:hover {
+    background-color: brown;
+    border-radius: 15px;
+}
+
+li {
+    padding: 0px 2px;
+}
+
+/* Gray Gradient Background */
 .bg-gray-gradient {
     background: linear-gradient(to bottom, #e0e0e0, #6e6e6e);
 }
 
-/* Peach Gradient */
+/* Peach Gradient Background */
 .bg-peach-gradient {
     background: linear-gradient(to bottom right, #ffe0b2, #ffcc80);
 }
 
-footer {
-    flex-shrink: 0;
+/* Fixed footer class */
+.fixed-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Style for the active navigation link */
+.nav-link.active {
+    color: white !important; /* Set text color to white */
+    font-weight: bold; /* Set font weight to bold */
 }
