@@ -1,0 +1,18 @@
+li:hover{
+    background-color: brown;
+    border-radius: 15px ;
+}
+
+
+.bg-gray-gradient {
+    background: linear-gradient(to bottom, #e0e0e0, #6e6e6e);
+}
+
+/* Peach Gradient */
+.bg-peach-gradient {
+    background: linear-gradient(to bottom right, #ffe0b2, #ffcc80);
+}
+
+footer {
+    flex-shrink: 0;
+}

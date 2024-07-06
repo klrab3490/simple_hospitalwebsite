@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}
+    contact
+{% endblock %}
+
+{% block content%}
+<div class="container my-5">
+    <!-- Contact Information Section -->
+    <section id="contact-info" class="mb-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center mb-4">Contact Information</h2>
+                <p class="text-justify">Contact ABC Hospital for any inquiries. Our dedicated staff is here to assist you with your healthcare needs.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Onigashima,Wano Country</li>
+                    <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> info@abchospital.com</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="mb-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3 class="text-center mb-4">Send Us a Message</h3>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <br>
+                    <button class=" btn btn-primary mb-4"type="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
