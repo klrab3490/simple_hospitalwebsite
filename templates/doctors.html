@@ -5,23 +5,23 @@
 {% endblock %}
 
 {% block content%}
-    <h2 class=" text-center">Our Doctors</h2>
-    <hr>
+  <h2 class=" text-center">Our Doctors</h2>
+  <hr>
 
 
-    <div class="container text-center bg-light">
+  <div class="container text-center bg-light">
 
-        {% for d in doctors%}
-        <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
-            <img class="card-img-top" src="{{d.doc_image.url}}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Dr. {{d.doc_name}}</h5>
-              <p class="card-text">{{d.doc_spec}}</p>
-              <h6>{{d.dept_name}} Department</h6>
-            </div>
+      {% for d in doctors%}
+      <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+          <img class="card-img-top" src="{{d.doc_image.url}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Dr. {{d.doc_name}}</h5>
+            <p class="card-text">{{d.doc_spec}}</p>
+            <h6>{{d.dept_name}} Department</h6>
           </div>
+        </div>
 
-        {% endfor %}
-    </div>
+      {% endfor %}
+  </div>
 
 {% endblock %}
